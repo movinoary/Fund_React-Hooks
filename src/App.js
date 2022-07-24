@@ -1,16 +1,13 @@
 import "./App.css";
-import StateInput from "./useState/StateInput";
-import StateTutorial from "./useState/StateTutorial";
+import ReducerTutorial from "./useReducer/ReducerTutorial";
 
 function App() {
   return (
     <div className="App">
       <div>
-        <StateTutorial />
+        <ReducerTutorial />
       </div>
-      <div>
-        <StateInput />
-      </div>
+      <div></div>
     </div>
   );
 }
