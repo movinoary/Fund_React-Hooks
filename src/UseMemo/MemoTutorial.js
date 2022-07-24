@@ -3,6 +3,7 @@ import { useEffect, useState, useMemo } from "react";
 
 export default function MemoTutorial() {
   const [data, setData] = useState(null);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     axios
@@ -28,9 +29,21 @@ export default function MemoTutorial() {
     return longestName;
   };
 
+  const getLongestName = useMemo(() => findLongestName(data), [toggle]);
+
   return (
     <div className="App">
-      <div> {findLongestName(data)} </div>
+      <div> {getLongestName} </div>
+
+      <button
+        onClick={() => {
+          setToggle(!toggle);
+        }}
+      >
+        {" "}
+        Toggle
+      </button>
+      {toggle && <h1> toggle </h1>}
     </div>
   );
 }
