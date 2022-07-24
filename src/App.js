@@ -1,11 +1,11 @@
 import "./App.css";
-import LayoutEffectTutorial from "./useLayoutEffect/LayoutEffectTutorial";
+import ImperativeHandle from "./useImperativeHandle/ImperativeHandle";
 
 function App() {
   return (
     <div className="App">
       <div>
-        <LayoutEffectTutorial />
+        <ImperativeHandle />
       </div>
     </div>
   );
